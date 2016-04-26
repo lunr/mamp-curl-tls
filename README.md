@@ -10,7 +10,7 @@ The steps outlined here will upgrade the MAMP cURL library to OpenSSL v1.0.2 whi
 
 ## Upgrade Steps
 
-### 1) Make sure you have XCode command line tools intsalled.
+### 1) Make sure you have XCode command line tools installed.
 
 We are going to need a C compiler and other libraries to upgrade cURL. So fire up a Terminal which you will continue to use for each step in this documentation.
 
@@ -28,7 +28,7 @@ Next, install the OpenSSL library:
 
 ### 3) Check the cURL version included with MAMP
 
-We just want to confirm which version of cURL we are using because we want to download and install the same version from the offical cURL website, haxx.se
+We just want to confirm which version of cURL we are using because we want to download and install the same version from the official cURL website, haxx.se
 
     /Applications/MAMP/Library/bin/curl-config --version
 
