@@ -108,21 +108,7 @@ Open the MAMP application and start the servers. You can use `phpinfo()` to conf
 
 Now that we have upgraded the cURL library, we need to test our connection with PayPal's payment gateway API to make sure MAMP and cURL will support TLS 1.2.
 
-Create a PHP script in the root directory of one of your virtual hosts, and paste the following code:
-
-    <?php
-
-    $curl_version = curl_version();
-    echo 'SSL Version: ' . $curl_version['ssl_version'] . "\n";
-
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "https://tlstest.paypal.com/");
-    curl_setopt($ch, CURLOPT_SSLVERSION, 6);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $response = curl_exec($ch);
-    if(!$response) { print_r(curl_error($ch)); } else { echo $response; }
-
-    ?>
+Download the `curl-test.php` script from this repository and save it to a web document root in one of your MAMP's virtual hosts.
 
 Open the PHP script's URL in a web browser, and you should see output like this:
 
